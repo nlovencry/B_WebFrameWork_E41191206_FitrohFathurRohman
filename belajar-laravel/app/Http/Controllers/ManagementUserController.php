@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class ManagementUserController extends Controller
 {
-	//di sini isi controller Management User
+	public function index(){
+		
+		return "Halo Ini saya mencoba BKPM tugas bu maya pertemuan 3/2";
 	}
+}
 
