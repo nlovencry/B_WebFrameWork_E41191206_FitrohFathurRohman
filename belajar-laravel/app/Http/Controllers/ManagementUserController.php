@@ -8,4 +8,4 @@ class ManagementUserController extends Controller
 {
 	//di sini isi controller Management User
 	}
- ?>
+
