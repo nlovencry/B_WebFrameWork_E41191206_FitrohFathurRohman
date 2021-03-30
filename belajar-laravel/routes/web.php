@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ManagementUserController;
 
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +17,18 @@ use App\Http\Controllers\ManagementUserController;
 |
 */
 
-Route::get('/user', 'ManagementUserController@index');
-       
+
+
+Route::resource('/user','ManagementUserController');
+
+// Route::get('/home',[HomeController::class,"index"]); error
+Route::get('/home', function () {
+    return view('layouts.home');
+});
+// Route::group(['namespace' => 'Frontend'], function()
+//             {
+//                 Route::resource('home', 'HomeController');
+//             });
 
 //Route::get('/', function(){
 //    return view('');
